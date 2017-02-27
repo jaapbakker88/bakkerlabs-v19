@@ -1,6 +1,13 @@
+-var menu = {'blog': 'https://jaap.ninja', 'work': '/work', 'contact': '/contact' };
+-var social = {'twitter': 'https://twitter.com/jaapbakker', 'facebook': 'https://facebook.com/bakker.labs', 'instagram': 'https://instagram.com/jpbkkr' };
+
+
 doctype html
 html
 	head
+		meta(http-equiv='Content-Type' content='text/html;charset=UTF-8')
+		meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+		meta(http-equiv='X-UA-Compatible', content='IE=7')
 		title= title
 		link(rel='stylesheet', href='/stylesheets/style.css')
 	body
@@ -12,4 +19,21 @@ html
 		footer
 			.container
 				.row
-					p test
+					.col-md-2
+						img(src='images/logo.svg' class="img-responsive" style='width: 100%;')
+					.col-md-2.col-md-offset-1
+						ul
+							p.typography 
+								strong menu
+							each val, key in menu
+								li
+									a(href=val, title=key) #{key}
+
+					.col-md-2.col-md-offset-1
+						ul
+							p.typography 
+								strong social
+							each val, key in social
+								li
+									a(href=val, title=key) #{key}
+

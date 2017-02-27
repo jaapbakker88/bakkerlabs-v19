@@ -1,6 +1,7 @@
 @import "vendors/bootstrap";
 @import "base/module";
 
+$off-white: #f8f8ff;
 $color1: 	#FF85B5;
 $color2: 	#FDF28E;
 $color1-d: 	darken($color1, 5%);
@@ -26,7 +27,7 @@ $color2-dd: 	darken($color2, 20%);
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #f8f8ff;
+  background: $off-white;
 }
 
 header .head {
@@ -60,11 +61,22 @@ header, section {
 	img {
 		margin-top: 2em;
 	}
+	.info-block {
+		margin-top: 2em;
+		margin-bottom: 2em;
+	}
 }
 
 footer {
-	min-height: 16em;
-	background: rgba(255,187,133,0.99);
+	padding-top: 4em;
+	padding-bottom: 4em;
+	background: rgba(0,0,0,0.79);
+	a {
+		color: $off-white;
+		&:hover {
+			color: darken($off-white, 10%);
+		}
+	}
 }
 
 /////////////////////////////////////////
@@ -110,7 +122,7 @@ li.active {
 }
 
 .post .block{
-	background: #f8f8ff;
+	background: $off-white;
 	border: 1px solid rgba(255,181,133,0.39);
 	margin: 1em 0;
 	padding: 1em 1.5em;
@@ -137,7 +149,7 @@ li.active {
 }
 .form-control {
 	box-shadow: inset 0px 0px 0px;
-	background-color: #f8f8ff;
+	background-color: $off-white;
 	border: 1px solid rgba(255,181,133,0.39);
 }
 
