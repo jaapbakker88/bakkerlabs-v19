@@ -1,0 +1,106 @@
+extends layout
+
+block content
+
+	header
+		include partials/navbar
+
+		.container.head
+			.row
+				.col-md-9
+					h1.h2
+						| Creating beautiful, functional interfaces. 
+						span For everyone.
+	//
+		section#work
+		.container-fluid
+			.row
+				.col-md-6
+					| bla bla
+				.col-md-6
+					| bla bla
+
+
+
+	section#social.container
+		.row.posts
+			if posts
+				each post in posts
+					.col-md-6
+						a.post.permalink-0(href= post.link, target='_blank')
+							.block
+								.date-0 Posted on #{post.date}
+								div
+									h4.h5.title-0= post.title
+								.summary-0= post.description
+
+		h5.h4.subscribe
+			| Read more on 
+			a(href='') jaap.ninja
+			|  or subscribe for weekly updates:
+		.row
+			form#revue-form(action='https://www.getrevue.co/profile/jaapbakker/add_subscriber', method='post', name='revue-form', target='_blank')
+				.col-md-10.form-group
+					label(for='member_email') Email address
+					input#member_email.revue-form-field.form-control.input-lg(placeholder='johndoe@hotmail.com', type='email', name='member[email]')
+				.col-md-2.form-group
+					p  
+					input#member_submit.btn.btn-default.btn-lg.btn-block(type='submit', value='Subscribe', name='member[subscribe]')
+
+
+
+	section#about
+		.container
+			.row
+				.col-md-10.col-md-offset-1
+					h2.h4 A little bit more about Bakker Labs, and what we do. 
+					.row.typography
+						.col-md-8
+							h4.h5
+								strong
+									| UI/UX design		
+							p
+								| Donec luctus lobortis tortor vel aliquet. Nam ligula nunc, imperdiet in porta ut, congue quis sapien. Praesent pellentesque urna est, eu tempor ex imperdiet a. Quisque eget sollicitudin libero, vel ullamcorper mi. Fusce quis finibus tortor. In et erat dui. Proin et dolor eleifend, placerat velit eu, efficitur nisi. Proin ligula lorem, sagittis vitae erat in, ultrices ultricies libero. Ut mauris enim, blandit eu augue gravida, commodo eleifend ligula. Quisque dignissim non tellus at pharetra. Etiam at ex purus. Nunc pharetra, nunc ut viverra malesuada, leo nulla imperdiet arcu, eget ornare nisi libero at ipsum.
+						.col-md-4
+							img(src="images/uxdesign.png" class="img-responsive img-circle")
+						
+						.col-md-8.pull-right
+							h4.h5
+								strong
+									| Front-end development
+							p
+								| Curabitur ut ex at nunc congue fermentum. Curabitur dapibus ante sed sapien dapibus semper at egestas ante. Donec eu sapien vel magna auctor rutrum eu a sapien. Sed ac euismod nisl, et accumsan tellus. Praesent tincidunt sagittis risus non accumsan. Etiam convallis ante nec lectus auctor sollicitudin. Aenean ac felis eu dolor faucibus condimentum sit amet a leo.
+						.col-md-4
+							img(src="images/frontenddevelopment.png" class="img-responsive img-circle")
+
+						.col-md-8
+							h4.h5
+								strong
+									| Design thinking
+							p
+								| Maecenas arcu lorem, pretium quis nulla id, dignissim aliquet mi. Morbi erat augue, placerat vitae faucibus ut, semper ut ante. Nulla facilisi. Aliquam nisi eros, egestas id faucibus dapibus, semper nec lectus. Donec interdum.
+						.col-md-4
+							img(src="images/designthinking.png" class="img-responsive img-circle")
+	
+	section#testimonials
+		.container
+			.row
+				p test
+
+	section.cta
+		.container
+			.row
+				p test
+
+		
+			
+ 
+
+		
+
+
+
+
+
+
+

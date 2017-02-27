@@ -1,0 +1,63 @@
+extends layout
+
+block content
+	-var selected = 'contact';
+	header
+		include partials/navbar
+		.container.head
+			.row
+				.col-md-9
+					h1.h2
+						| Creating beautiful, functional interfaces. 
+						span For everyone.
+		
+	section.pattern
+		.container
+			.row
+				.col-md-12
+					h2.h3 
+						|Shoot us a message, we won't bite.
+
+			.row
+
+				.col-md-4.pull-right
+					p
+						| &nbsp;
+					p.typography
+						strong Or contact us directly at:
+					p
+						|hello@bakkerlabs.nl
+					p
+						|+31 (6) 361 214 42
+					p.typography
+						strong Post address:
+					p 
+						| Anna Bijnsstraat 24-hs
+					p
+						| 1064JP Amsterdam
+
+				.col-md-8
+					.row
+						if(typeof msg !== 'undefined')
+							if(!!err)
+								div(class='msgbox err') #{msg}
+							else
+								div(class='msgbox success') #{msg}
+
+						form(action='/contact', name='contactus', id='contactus', method='post')
+							.col-md-6.form-group
+								label(for='name') Name:
+								input(name='name', type='text', value='', id='name' class='form-control input-lg' required)
+
+							.col-md-6.form-group
+								label(for='email') Email:
+								input(name='email', type='text', value='', id='email' class='form-control input-lg' required)
+								// honeypot
+								input(name='company', type='text', value='', id='company-field')
+
+							.col-md-12.form-group
+								label(for='message') Message:
+								textarea(name='message', rows='10' id='message' class='form-control' required)
+
+							.col-md-4.col-md-offset-8.form-group
+								input(name='submit', type='submit', value='Send', id='submit' class='btn btn-default btn-lg btn-block')
