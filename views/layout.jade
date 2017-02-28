@@ -19,9 +19,9 @@ html
 		footer
 			.container
 				.row
-					.col-md-2
+					.col-md-2.hidden-sm.hidden-xs
 						img(src='images/logo.svg' class="img-responsive" style='width: 100%;')
-					.col-md-2.col-md-offset-1
+					.col-md-2.col-md-offset-1.col-xs-6
 						ul
 							p.typography 
 								strong menu
@@ -29,11 +29,15 @@ html
 								li
 									a(href=val, title=key) #{key}
 
-					.col-md-2.col-md-offset-1
+					.col-md-2.col-md-offset-1.col-xs-6
 						ul
 							p.typography 
 								strong social
 							each val, key in social
 								li
 									a(href=val, title=key) #{key}
+
+
+
+		script(src='javascripts/scripts.js')
 
