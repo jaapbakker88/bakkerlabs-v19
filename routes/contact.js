@@ -14,7 +14,7 @@ var auth = {
 
 /* GET contact page. */
 router.get('/', function(req, res, next) {
-	res.render('contact', {title: 'Contact us!'})
+	res.render('contact', {title: 'Contact - Bakker Labs'})
 });
 
 router.post('/', function(req, res) {

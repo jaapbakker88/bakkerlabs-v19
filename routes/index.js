@@ -23,7 +23,7 @@ router.get('/', function(req, res, next) {
 	// GET POSTS from jaap.ninja
 	parser.parseURL('https://jaap.ninja/rss/', function(err, parsed) {
 		if (err) {
-			res.render('index', { title: 'Bakker Labs'});
+			res.render('index', { title: 'Bakker Labs - Independent Design and Development Studio'});
 		} else {
 			var posts = [{title: '', description: '', date: '', link: ''}, {title: '', description: '', date: '', link: ''}];
 			for (var i = 0; i < 2; i++) {
